@@ -5,25 +5,21 @@ import numpy as np
 from distributions import ArrivalDistribution, StayDistribution, select_drink, select_food, DrinkDistribution, FoodDistribution
 
 '''
-Store simulation
+SUMMARY
 
-Customer groups come according to normal distribution
-Customer groups will stay for __ amount of time according to a duration function
+- Customer groups come according to normal distribution
+- Customer groups will stay for an amount of time according to a duration distribution
+- Customer groups have a number of people ranging from 4 to 8 customers
+- Each customer has a __% of buying alcohol at any given time bvased on a frequency distribution
+- Each customer has a __% chance of buying food at any given time based on a frequency distribution
+- When a customer orders food, it requests an Employee. The employee then must request a fryer to start frying the food
+- If all staff are occupied and a new group arrives, staff making food or serving drinks will be interupted
 
-Customer groups have a number of people ranging from 2 to 8 customers
+DEFENITIONS
 
-Each customer has a __% of buying alcohol
-Each customer has a __% chance of buying food
-
-When a customer orders food, it requests an Employee. The employee then must request a fryer
-'''
-
-'''
-POD - max seating for 8 people
-FRYER - deep frier
-Customer 
-Employee
-Party - Group of Customers
+- POD: max seating for 8 people
+- FRYER: deep frier
+- Party: Group of Customers
 
 '''
 

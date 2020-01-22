@@ -117,29 +117,31 @@ def select_food(options):
 
 
 if __name__ == '__main__':
+    # Arrivals
     arrivals = ArrivalDistribution(48, 6.8339 * 60, 4.40638 * 60)
     sns.distplot(arrivals.distribution, bins=12)
     plt.draw()
     plt.show()
 
+    # Length of stay
     stay = StayDistribution()
     sns.distplot(stay.distribution)
     plt.draw()
     plt.show()
-    '''
-     foods = FoodDistribution()
-     sns.distplot(foods.distribution, bins=12)
-     p1 = foods.get_food_probability(600)
-     p2 = foods.get_food_probability(200)
-     p3 = foods.get_food_probability(1140)
-     print("{} {} {}".format(p1, p2, p3))
-     plt.draw()
-     plt.show()
- '''
-'''
+    
+    
+    # Food
+    foods = FoodDistribution()
+    sns.distplot(foods.distribution, bins=12)
+    p1 = foods.get_food_probability(600)
+    p2 = foods.get_food_probability(200)
+    p3 = foods.get_food_probability(1140)
+    print("{} {} {}".format(p1, p2, p3))
+    plt.draw()
+    plt.show()
 
+    # Drinks
     drinks = DrinkDistribution()
-
     p1 = drinks.get_drink_probability(600)
     p2 = drinks.get_drink_probability(200)
     print(p1)
@@ -147,7 +149,3 @@ if __name__ == '__main__':
     sns.distplot(drinks.distribution, bins=12)
     plt.draw()
     plt.show()
-
-'''
-
- 
