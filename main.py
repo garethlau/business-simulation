@@ -280,7 +280,7 @@ def print_summary(data):
     # Pod wait time
     pod_wait_time = 0
     for delay in data['wait']['pods']:
-        pod_wait_time += delay
+        pod_wait_time += (delay - 8)
 
     # Food wait time
     food_wait_time = 0
@@ -343,10 +343,10 @@ if __name__ == '__main__':
         }
     }
     # Store Parameters
-    NUM_FRYERS = 5
-    NUM_STAFF = 4
+    NUM_FRYERS = 3
+    NUM_STAFF = 3
     NUM_PODS = 8
-    ADMISSION_PRICE = 12
+    ADMISSION_PRICE = 7
 
     # Set a very long sim time to account for events that overflow past the operating hours
     SIM_TIME = 10000 * 60     
@@ -363,7 +363,7 @@ if __name__ == '__main__':
 
     # Distribution Parameters
     ARRIVAL_PARAMS = {
-        "size": 48,
+        "size": 100,
         "loc": 6.8339 * 60,
         "scale": 4.40638 * 60
     }
